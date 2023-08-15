@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <article>
+        <h1>
+          <%= @article.title %>
+          <small>
+            <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-link" %>
+            <%= link_to "Delete",
+                        article_path(@article),
+                        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                        class: "btn btn-link" %>
+          </small>
+        </h1>
+
+        <hr>
+        <p>Eaque sit eligendi. Et quia sunt. Odit qui aut.</p>
+
+        <p><img src="http://lorempixel.com/800/300/city/" alt=""></p>
+
+        <!-- Rest of the article content -->
+      </article>
+    </div>
+  </div>
+</div>
